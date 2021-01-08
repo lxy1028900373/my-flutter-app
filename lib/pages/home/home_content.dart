@@ -14,15 +14,12 @@ class _HomeContentState extends State<HomeContent> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          buildBanner(),
-          buildGridView()
-        ],
-      )
+    return ListView(
+      children: <Widget>[
+        buildBanner(),
+        buildGridView(),
+        buildLessList()
+      ],
     );
   }
 }
@@ -60,5 +57,44 @@ Widget buildGridView(){
       height: 162,
       child: HomeGrid(grid: _grid),
     )
+  );
+}
+
+//课程列表
+Widget buildLessList(){
+  List _lesson=[
+    {"title": "课程1", "tag_txt": "标签", "label_txt": "属性", "image": "assets/images/lesson/image_1.jpg"},
+    {"title": "课程2", "tag_txt": "标签", "label_txt": "属性", "image": "assets/images/lesson/image_2.jpg"},
+    {"title": "课程3", "tag_txt": "标签", "label_txt": "", "image": "assets/images/lesson/image_3.jpg"},
+    {"title": "课程4", "tag_txt": "", "label_txt": "", "image": "assets/images/lesson/image_4.jpg"},
+    {"title": "课程5", "tag_txt": "", "label_txt": "属性", "image": "assets/images/lesson/image_5.jpg"},
+    {"title": "课程6", "tag_txt": "标签", "label_txt": "属性", "image": "assets/images/lesson/image_6.jpg"}
+  ];
+
+  return  Container(
+    padding: const EdgeInsets.fromLTRB(16, 40, 16, 40),
+    child: Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        buildLessonItem()
+      ],
+    ),
+  );
+}
+
+Widget buildLessonItem(){
+  return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>[
+        buildContentInfoTitle()
+      ]
+  );
+}
+
+Widget buildContentInfoTitle(){
+  return Container(
+    height: 300,
+    color: Colors.purple,
+    child: Text('嘿嘿'),
   );
 }
