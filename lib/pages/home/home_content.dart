@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
-import '../../widgets/swiper.dart';
+import 'dart:math';
 
+import '../../widgets/swiper.dart';
+import '../../widgets/grid.dart';
+
+//首页
 class HomeContent extends StatefulWidget {
   @override
   _HomeContentState createState() => _HomeContentState();
 }
 
 class _HomeContentState extends State<HomeContent> {
-
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +19,8 @@ class _HomeContentState extends State<HomeContent> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: <Widget>[
-          buildBanner()
+          buildBanner(),
+          buildGridView()
         ],
       )
     );
@@ -33,8 +37,28 @@ Widget buildBanner(){
 
   return Container(
     child: SizedBox(
-      height: 180,
+      height: 162,
       child: HomeSwiper(banners: _banners),
     ),
+  );
+}
+
+//宫格
+Widget buildGridView(){
+  List _grid= [
+    {"image": "assets/images/grid_icon.png", "title":"标题"},
+    {"image": "assets/images/grid_icon.png", "title":"标题"},
+    {"image": "assets/images/grid_icon.png", "title":"标题"},
+    {"image": "assets/images/grid_icon.png", "title":"标题"},
+    {"image": "assets/images/grid_icon.png", "title":"标题"},
+    {"image": "assets/images/grid_icon.png", "title":"标题"},
+  ];
+
+  return Container(
+    padding: const EdgeInsets.all(16),
+    child: SizedBox(
+      height: 162,
+      child: HomeGrid(grid: _grid),
+    )
   );
 }
