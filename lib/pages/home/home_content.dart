@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'dart:math';
 
 import '../../widgets/swiper.dart';
 import '../../widgets/grid.dart';
+import 'home_lesson_item.dart';
 
 //首页
 class HomeContent extends StatefulWidget {
@@ -63,38 +65,21 @@ Widget buildGridView(){
 //课程列表
 Widget buildLessList(){
   List _lesson=[
-    {"title": "课程1", "tag_txt": "标签", "label_txt": "属性", "image": "assets/images/lesson/image_1.jpg"},
-    {"title": "课程2", "tag_txt": "标签", "label_txt": "属性", "image": "assets/images/lesson/image_2.jpg"},
-    {"title": "课程3", "tag_txt": "标签", "label_txt": "", "image": "assets/images/lesson/image_3.jpg"},
-    {"title": "课程4", "tag_txt": "", "label_txt": "", "image": "assets/images/lesson/image_4.jpg"},
-    {"title": "课程5", "tag_txt": "", "label_txt": "属性", "image": "assets/images/lesson/image_5.jpg"},
-    {"title": "课程6", "tag_txt": "标签", "label_txt": "属性", "image": "assets/images/lesson/image_6.jpg"}
+    {"title": "这是一个长标题这是一个长标题这是一个长标题", "tag_txt": "标签", "label_txt": "属性", "image": "assets/images/lesson/image_1.jpg", "price": "799", "diff_price": 199, "stu_num": 10, "is_limit": 1},
+    {"title": "课程2", "tag_txt": "标签", "label_txt": "属性", "image": "assets/images/lesson/image_2.jpg", "price": "799", "diff_price": 0, "stu_num": 0, "is_limit": 0},
+    {"title": "课程3", "tag_txt": "标签", "label_txt": "", "image": "assets/images/lesson/image_3.jpg", "price": "499", "diff_price": 299, "stu_num": 2, "is_limit": 0},
+    {"title": "课程4", "tag_txt": "", "label_txt": "", "image": "assets/images/lesson/image_4.jpg", "price": "199", "diff_price": 99, "stu_num": 20, "is_limit": 0},
+    {"title": "课程5", "tag_txt": "", "label_txt": "属性", "image": "assets/images/lesson/image_5.jpg", "price": "99", "diff_price": 0, "stu_num": 0, "is_limit": 1},
+    {"title": "课程6", "tag_txt": "标签", "label_txt": "属性", "image": "assets/images/lesson/image_6.jpg", "price": "299", "diff_price": 9.9, "stu_num": 30, "is_limit": 0}
   ];
 
-  return  Container(
-    padding: const EdgeInsets.fromLTRB(16, 40, 16, 40),
-    child: Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        buildLessonItem()
-      ],
-    ),
-  );
-}
-
-Widget buildLessonItem(){
-  return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: <Widget>[
-        buildContentInfoTitle()
-      ]
-  );
-}
-
-Widget buildContentInfoTitle(){
-  return Container(
-    height: 300,
-    color: Colors.purple,
-    child: Text('嘿嘿'),
+  return ListView.builder(
+    padding: const EdgeInsets.fromLTRB(16, 24, 16, 40),
+    itemCount: _lesson.length,
+    shrinkWrap: true,
+      physics:NeverScrollableScrollPhysics(),//多重ListView嵌套添加 禁用滑动事件
+    itemBuilder: (ctx, index) {
+      return HomeLessonItem(_lesson[index]);
+    }
   );
 }
