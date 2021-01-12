@@ -6,8 +6,8 @@ import '../profile/profile.dart';
 
 //底部tabbar
 List<BottomBarItem> items =[
-  BottomBarItem("home", "首页"),
-  BottomBarItem("subject", "课程"),
+  BottomBarItem("home", "课程"),
+  BottomBarItem("subject", "学习"),
   BottomBarItem("profile", "我的")
 ];
 

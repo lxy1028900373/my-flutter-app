@@ -12,6 +12,7 @@ class _ProfilePageState extends State<ProfilePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text('我的'),
+        centerTitle: true,
       ),
       body: ProfileContent(),
     );

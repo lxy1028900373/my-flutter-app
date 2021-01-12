@@ -13,7 +13,6 @@ class HomeGrid extends StatefulWidget {
 class _HomeGridState extends State<HomeGrid> {
   @override
   Widget build(BuildContext context) {
-    print(this.widget.grid);
     return Container(
       child: GridView(
         //禁止滚动(可以间接实现取消水波纹)
