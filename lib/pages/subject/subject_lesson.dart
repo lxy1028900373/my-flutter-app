@@ -14,19 +14,34 @@ class _MyLessonPageState extends State<MyLessonPage> {
     {"id": 4, "title": "课程名称4", "task_txt": "0/11", "valid_time": "365"},
     {"id": 5, "title": "课程名称5", "task_txt": "0/11", "valid_time": "0"},
   ];
-  final int _pageSize = 5;  //数量/页
+  int _currentPage = 1;//当前页数
+  int _pageSize = 5;  //数量/页
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.symmetric(horizontal: 20),
-      child: ListView.builder(
-        itemCount: _pageSize,
-        itemBuilder: (ctx, i){
-          return buildLessonItem(lessonList[i], i == _pageSize - 1);
-        },
+    print(_currentPage);
+    return RefreshIndicator(
+      displacement: 10, //距离顶部距离
+      onRefresh: _pullToRefresh,
+
+      child: Container(
+        padding: EdgeInsets.symmetric(horizontal: 20),
+        child: ListView.builder(
+          itemCount: _pageSize,
+          itemBuilder: (ctx, i){
+            return buildLessonItem(lessonList[i], i == _pageSize - 1);
+          },
+        ),
       ),
     );
+  }
+
+  // 下拉刷新,必须异步async不然会报错
+  Future _pullToRefresh() async {
+    setState(() {
+      _currentPage= 1;
+    });
+    return null;
   }
 }
 
