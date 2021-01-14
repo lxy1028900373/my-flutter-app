@@ -16,6 +16,7 @@ class _MyHomePageState extends State<HomeSwiper> {
   Widget build(BuildContext context) {
 
     return Container(
+      padding: EdgeInsets.all(16),
       child: new Swiper(
         //布局构建
         // itemBuilder: (BuildContext context,int index){
@@ -62,7 +63,7 @@ class _MyHomePageState extends State<HomeSwiper> {
 
     return ClipRRect(
       // 圆角
-      borderRadius: new BorderRadius.all(new Radius.circular(0)),
+      borderRadius: new BorderRadius.all(new Radius.circular(8)),
       child: new Image.asset(
         widget.banners[index],
         fit: BoxFit.fill,

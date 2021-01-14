@@ -54,7 +54,7 @@ Widget buildGridView(){
   ];
 
   return Container(
-    padding: const EdgeInsets.all(16),
+    padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
     child: SizedBox(
       height: 162,
       child: HomeGrid(grid: _grid),
