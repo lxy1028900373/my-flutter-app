@@ -1,7 +1,5 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_app/pages/detail/detail.dart';
-import 'package:flutter_app/pages/subject/subject.dart';
 
 class UcenterContent extends StatelessWidget {
   final List ucenterList; //声明List类型

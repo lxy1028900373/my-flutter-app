@@ -15,9 +15,6 @@ class MyRouter {
 
   //生成路由
   static final RouteFactory generateRoute = (settings) {
-    print('--route--');
-    print(settings.name);
-    print(MainPage.routeName);
     if (settings.name == MainPage.routeName) {
       return MaterialPageRoute(
           builder: (ctx) {
@@ -30,7 +27,7 @@ class MyRouter {
     return null;
   };
 
-  // 路由不匹配起
+  // 路由不匹配
   static final RouteFactory unknownRoute = (settings) {
     print('onUnknownRoute:$settings');
     return MaterialPageRoute(builder: (BuildContext context) {
