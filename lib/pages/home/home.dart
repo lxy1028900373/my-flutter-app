@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'home_content.dart';
 
 class HomePage extends StatefulWidget {
+
   @override
   _HomePageState createState() => _HomePageState();
 }

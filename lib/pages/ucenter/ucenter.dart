@@ -4,6 +4,7 @@ import 'ucenter_header.dart';
 import 'ucenter_content.dart';
 
 class UcenterPage extends StatefulWidget {
+
   @override
   _UcenterPageState createState() => _UcenterPageState();
 }

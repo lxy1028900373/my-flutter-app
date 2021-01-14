@@ -1,4 +1,7 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/detail/detail.dart';
+import 'package:flutter_app/pages/subject/subject.dart';
 
 class UcenterContent extends StatelessWidget {
   final List ucenterList; //声明List类型
@@ -7,7 +10,7 @@ class UcenterContent extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(16, 50, 16, 0),
+      padding: EdgeInsets.symmetric(vertical: 30, horizontal: 16),
       child: Column(
         children: ucenterList.map((item){
           return buildUcenterItem(context,item);
@@ -23,7 +26,7 @@ Widget buildUcenterItem(context, item){
     child: Container(
       height: 56,
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: <Widget>[
           Icon(item['icon'], size: 24,),
           SizedBox(width: 10),

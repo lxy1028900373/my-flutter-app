@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'initialize_items.dart';
 
 class MainPage extends StatefulWidget {
+  static const String routeName = "/";
+
   @override
   _MainPageState createState() => _MainPageState();
 }

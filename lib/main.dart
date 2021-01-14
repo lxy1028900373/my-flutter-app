@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:english_words/english_words.dart'; //常用英文单词
-
+import 'package:flutter_app/core/router/router.dart';
 import 'pages/main/main.dart';
 
 void main() => runApp(MyApp());
@@ -12,7 +11,12 @@ class MyApp extends StatelessWidget {
     // final wordPair = new WordPair.random();
     return MaterialApp(
       title: '首页',
-      home: MainPage()
+      // home: MainPage(),  //注册路由后，须删除该页面路由
+      // 路由
+      initialRoute: MyRouter.initialRoute,
+      routes: MyRouter.routes,
+      onGenerateRoute: MyRouter.generateRoute,
+      onUnknownRoute: MyRouter.unknownRoute,
     );
   }
 }

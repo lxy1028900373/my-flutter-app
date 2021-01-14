@@ -1,25 +1,39 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/pages/detail/detail.dart';
 
 //首页-课程列表
 class HomeLessonItem extends StatelessWidget {
   final Object lesson;
+  final String id;
+  final String title;
 
-  HomeLessonItem(this.lesson);
+
+  HomeLessonItem(this.lesson, this.id, this.title);
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: EdgeInsets.only(top: 16),
-      child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          // 子元素使用Expanded可省略这段代码
-          // mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            buildContentImg(lesson),
-            SizedBox(width: 16,),
-            buildContentInfoTitle(lesson)
-          ]
-      ),
+      child: InkWell(
+        child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            // 子元素使用Expanded可省略这段代码
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              buildContentImg(lesson),
+              SizedBox(width: 16,),
+              buildContentInfoTitle(lesson)
+            ]
+        ),
+        onTap: (){
+          //普通跳转
+          // Navigator.push(context, MaterialPageRoute(builder: (context){
+          //   return SubjectPage();
+          // }));
+          // 命名路由跳转
+          Navigator.of(context).pushNamed(DetailPage.routeName, arguments: {"id": id, "title": title});
+        },
+      )
     );
   }
 }

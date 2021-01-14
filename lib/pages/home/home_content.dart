@@ -65,12 +65,12 @@ Widget buildGridView(){
 //课程列表
 Widget buildLessList(){
   List _lesson=[
-    {"title": "这是一个长标题这是一个长标题这是一个长标题", "tag_txt": "标签", "label_txt": "属性", "image": "assets/images/lesson/image_1.jpg", "price": "799", "diff_price": 199, "stu_num": 10, "is_limit": 1},
-    {"title": "课程2", "tag_txt": "标签", "label_txt": "属性", "image": "assets/images/lesson/image_2.jpg", "price": "799", "diff_price": 0, "stu_num": 0, "is_limit": 0},
-    {"title": "课程3", "tag_txt": "标签", "label_txt": "", "image": "assets/images/lesson/image_3.jpg", "price": "499", "diff_price": 299, "stu_num": 2, "is_limit": 0},
-    {"title": "课程4", "tag_txt": "", "label_txt": "", "image": "assets/images/lesson/image_4.jpg", "price": "199", "diff_price": 99, "stu_num": 20, "is_limit": 0},
-    {"title": "课程5", "tag_txt": "", "label_txt": "属性", "image": "assets/images/lesson/image_5.jpg", "price": "99", "diff_price": 0, "stu_num": 0, "is_limit": 1},
-    {"title": "课程6", "tag_txt": "标签", "label_txt": "属性", "image": "assets/images/lesson/image_6.jpg", "price": "299", "diff_price": 9.9, "stu_num": 30, "is_limit": 0}
+    {"id": "1", "title": "这是一个长标题这是一个长标题这是一个长标题", "tag_txt": "标签", "label_txt": "属性", "image": "assets/images/lesson/image_1.jpg", "price": "799", "diff_price": 199, "stu_num": 10, "is_limit": 1},
+    {"id": "2", "title": "课程2", "tag_txt": "标签", "label_txt": "属性", "image": "assets/images/lesson/image_2.jpg", "price": "799", "diff_price": 0, "stu_num": 0, "is_limit": 0},
+    {"id": "3", "title": "课程3", "tag_txt": "标签", "label_txt": "", "image": "assets/images/lesson/image_3.jpg", "price": "499", "diff_price": 299, "stu_num": 2, "is_limit": 0},
+    {"id": "4", "title": "课程4", "tag_txt": "", "label_txt": "", "image": "assets/images/lesson/image_4.jpg", "price": "199", "diff_price": 99, "stu_num": 20, "is_limit": 0},
+    {"id": "5", "title": "课程5", "tag_txt": "", "label_txt": "属性", "image": "assets/images/lesson/image_5.jpg", "price": "99", "diff_price": 0, "stu_num": 0, "is_limit": 1},
+    {"id": "6", "title": "课程6", "tag_txt": "标签", "label_txt": "属性", "image": "assets/images/lesson/image_6.jpg", "price": "299", "diff_price": 9.9, "stu_num": 30, "is_limit": 0}
   ];
 
   return ListView.builder(
@@ -79,7 +79,8 @@ Widget buildLessList(){
     shrinkWrap: true,
       physics:NeverScrollableScrollPhysics(),//多重ListView嵌套添加 禁用滑动事件
     itemBuilder: (ctx, index) {
-      return HomeLessonItem(_lesson[index]);
-    }
+      return HomeLessonItem(_lesson[index], _lesson[index]['id'], _lesson[index]['title']);
+    },
+
   );
 }
