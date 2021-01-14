@@ -11,6 +11,7 @@ class MyApp extends StatelessWidget {
     // final wordPair = new WordPair.random();
     return MaterialApp(
       title: '首页',
+      debugShowCheckedModeBanner: false,  //移除右上角debug标识
       // home: MainPage(),  //注册路由后，须删除该页面路由
       // 路由
       initialRoute: MyRouter.initialRoute,
