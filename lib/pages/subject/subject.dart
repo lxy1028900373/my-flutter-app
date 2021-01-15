@@ -44,7 +44,6 @@ class _SubjectPageState extends State<SubjectPage> with SingleTickerProviderStat
         bottom: buildTabBar(),
         //设置标题居中
         centerTitle: true,
-        // backgroundColor: Colors.white,
       ),
       //设置选项卡对应的page
       body: buildBodyView(),
@@ -89,7 +88,7 @@ class _SubjectPageState extends State<SubjectPage> with SingleTickerProviderStat
       children: tabs.map((e) {
         return Container(
           alignment: Alignment.center,
-          color: Colors.white,
+          color: Color(0xfffaf8f6),
           child: e == '待做任务' ? TodayTaskPage() : MyLessonPage(),
         );
       }).toList(),

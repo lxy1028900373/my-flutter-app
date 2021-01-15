@@ -25,7 +25,6 @@ class _MyLessonPageState extends State<MyLessonPage> {
       onRefresh: _pullToRefresh,
 
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: 20),
         child: ListView.builder(
           itemCount: _pageSize,
           itemBuilder: (ctx, i){
@@ -48,7 +47,20 @@ class _MyLessonPageState extends State<MyLessonPage> {
 //课程列表项
 Widget buildLessonItem(item, is_last_child){
   return Container(
-    margin: is_last_child ? EdgeInsets.symmetric(vertical: 20) : EdgeInsets.only(top: 20),
+    margin: is_last_child ? EdgeInsets.all(20) : EdgeInsets.fromLTRB(20, 20, 20, 0),
+    decoration: BoxDecoration(
+      color: Colors.white,
+      borderRadius: BorderRadius.circular(10),
+      // 阴影
+      boxShadow: [
+        BoxShadow(
+          color: Colors.black12,  //底色,阴影颜色
+          offset: Offset(0, 0), //阴影位置,从什么位置开始
+          blurRadius: 1,  // 阴影模糊层度
+          spreadRadius: 0,  //阴影模糊大小
+        ),
+      ],
+    ),
     child: ClipRRect(
       borderRadius: BorderRadius.circular(10),
       child: Column(
