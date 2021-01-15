@@ -88,7 +88,7 @@ class _SubjectPageState extends State<SubjectPage> with SingleTickerProviderStat
       children: tabs.map((e) {
         return Container(
           alignment: Alignment.center,
-          color: Color(0xfffaf8f6),
+          color: Colors.white,
           child: e == '待做任务' ? TodayTaskPage() : MyLessonPage(),
         );
       }).toList(),
