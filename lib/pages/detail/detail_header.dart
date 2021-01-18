@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/global/app_theme.dart';
 
 //课程详情页-头部
 class DetailHeader extends StatelessWidget {
@@ -26,7 +27,7 @@ class DetailHeader extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     buildPriceInfo(detailInfo['price'] ,detailInfo['diff_price']),
-                    Text("已有 ${detailInfo['buy_num']} 人报名", style: TextStyle(fontSize: 13, height: 1.2, color: Color(0xff656565))),
+                    Text("已有 ${detailInfo['buy_num']} 人报名", style: TextStyle(fontSize: 13, height: 1.2, color: AppColor.colorGray)),
                   ],
                 )
               ],

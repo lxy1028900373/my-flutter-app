@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app/global/app_theme.dart';
 
 //课程详情页-底部按钮
 class DetailFooterBtn extends StatefulWidget {
@@ -26,7 +27,7 @@ class _DetailFooterBtnState extends State<DetailFooterBtn> {
                   style: TextStyle(
                       fontSize: 18,
                       fontWeight: FontWeight.bold,
-                      color: Color(0xffff7211)
+                      color: AppColor.colorYellow
                   ),
                 ),
                 textColor: Colors.white,
@@ -52,7 +53,7 @@ class _DetailFooterBtnState extends State<DetailFooterBtn> {
                       )
                   ),
                   textColor: Colors.white,
-                  color: Color(0xffff7721),
+                  color: AppColor.colorYellow,
                   // 圆角
                   shape: RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(40)
