@@ -14,7 +14,7 @@
 
 ![img](https://raw.githubusercontent.com/lxy1028900373/my-flutter-app/master/images/home.png)
 
-- 课程详情
+#### 课程详情
 
 ![img](https://raw.githubusercontent.com/lxy1028900373/my-flutter-app/master/images/detail.png)
 
@@ -24,10 +24,10 @@
 
 ![img](https://raw.githubusercontent.com/lxy1028900373/my-flutter-app/master/images/subject_lesson.png)
 
-- 上拉加载更多
+#### 上拉加载更多
 
 ![img](https://raw.githubusercontent.com/lxy1028900373/my-flutter-app/master/images/subject_loadmore.png)
 
-个人中心
+#### 个人中心
 
 ![img](https://raw.githubusercontent.com/lxy1028900373/my-flutter-app/master/images/ucenter.png)
