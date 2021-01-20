@@ -12,22 +12,22 @@
 
 #### 首页
 
-![1611112839285](C:\Users\EDZ\AppData\Roaming\Typora\typora-user-images\1611112839285.png)
+![img](https://raw.githubusercontent.com/lxy1028900373/my-flutter-app/master/images/home.png)
 
 - 课程详情
 
-![1611112721529](C:\Users\EDZ\AppData\Roaming\Typora\typora-user-images\1611112721529.png)
+![img](https://raw.githubusercontent.com/lxy1028900373/my-flutter-app/master/images/detail.png)
 
 #### 学习
 
-![1611112565998](C:\Users\EDZ\AppData\Roaming\Typora\typora-user-images\1611112565998.png)
+![img](https://raw.githubusercontent.com/lxy1028900373/my-flutter-app/master/images/subject_task.png)
 
-![1611112590366](C:\Users\EDZ\AppData\Roaming\Typora\typora-user-images\1611112590366.png)
+![img](https://raw.githubusercontent.com/lxy1028900373/my-flutter-app/master/images/subject_lesson.png)
 
 - 上拉加载更多
 
-![1611112612094](C:\Users\EDZ\AppData\Roaming\Typora\typora-user-images\1611112612094.png)
+![img](https://raw.githubusercontent.com/lxy1028900373/my-flutter-app/master/images/subject_loadmore.png)
 
 个人中心
 
-![1611112645047](C:\Users\EDZ\AppData\Roaming\Typora\typora-user-images\1611112645047.png)
+![img](https://raw.githubusercontent.com/lxy1028900373/my-flutter-app/master/images/ucenter.png)
